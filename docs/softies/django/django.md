@@ -83,14 +83,43 @@ install python -> create virtual env -> install django
 - For SSH Access: $ git@github.com:username/repo_name.git
 - PAT: $ https://username:PERSONAL_ACCESS_TOKEN@github.com/username/repo.git
 
----
+- Environment Variable Setup:
 
-title: "Initial Set Up"
-lang: en
-handle: intial-set-up
-layout: default
+1- Install libs:
 
----
+```bash
+pip install django-environ
+```
+
+2- create .env.dev and .env.prod in the root
+
+- PostgreSQL Setup:
+
+1- Install libs:
+
+```bash
+pip install psycopg[binary]
+```
+
+** Postgress Local Connection **
+
+- Run psql: $ sudo -u postgres psql
+- Quit psql: $ \q
+- List all users: $ \du
+- Remove user: $ DROP USER IF EXISTS username;
+- List all DBs: $ \l
+- Remove DB: $ DROP DATABASE database_name;
+- Create new user: $ CREATE USER myuser WITH PASSWORD 'mypassword';
+- Create new DB: $ CREATE DATABASE mydb OWNER myuser;
+- DB URL: postgresql://{env('DB_USER')}:{env('DB_PASSWORD')}@localhost:5432/{env('DB_NAME')}
+- Grant full permission: $ ALTER ROLE myuser SET client_encoding TO 'utf8';
+  $ ALTER ROLE myuser SET default_transaction_isolation TO 'read committed';
+  $ ALTER ROLE myuser SET timezone TO 'UTC';
+  $ GRANT ALL PRIVILEGES ON DATABASE mydb TO myuser;
+
+- CREATE DATABASE your_database_name;
+- CREATE USER your_username WITH ENCRYPTED PASSWORD 'your_password';
+- GRANT ALL PRIVILEGES ON DATABASE your_database_name TO your_username;
 
 # Chapter 1: Initial Set Up
 
