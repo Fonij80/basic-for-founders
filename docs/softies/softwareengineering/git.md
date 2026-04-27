@@ -1,3 +1,18 @@
+---
+slug: git-basics
+title: Git Notes: From Beginner to Real Workflow
+excerpt: Clear notes on Git fundamentals, branches, remotes, merging, rebasing, and pull requests.
+category: computer
+tags:
+  - git
+  - version-control
+  - cli
+publishedAt: 2026-03-28
+readTime: 18 min read
+cover: ./cover.webp
+toc: true
+---
+
 # Git
 
 ## Definitions
@@ -25,17 +40,25 @@
 ## CLI Commands
 
 ```bash
-pwd # print working directory
+whoami  # print computer username
 
-ls # list **visible** files and dirs
+echo <what_you_want_to_print>  # print the input
 
-ls -a # list **hidden & visible** file and dirs
+pwd  # print working directory
 
-cd <path_to_dir> # change dir
+ls  # list **visible** files and dirs
 
-mkdir <dir_name> # make a new dir
+ls -a  # list **hidden & visible** file and dirs
+
+ls -la  # list **hidden & visible** file and dirs with their permissions
+
+cd <path_to_dir>  # change dir
+
+mkdir <dir_name>  # make a new dir
 
 clear  # clear the CLI from previous commands
+
+exit  # close the terminal window
 ```
 
 ## Git Commands
@@ -458,12 +481,22 @@ created to work on a specific part of a project in Git as topic branches (or fea
 
 - Git is created by _Linus Torvalds_ to version control the Linux kernel.
 
-- **Terminal**: CLI in Linux and MacOS
+- **Terminal**: CLI on Linux and MacOS, the program that opens up a new window to access the command line
 
-- **Git Bash**: CLI in Windows
+- **Git Bash**: CLI on Windows
+
+- **PowerShell**: built-in terminal on Windows
+
+- **Console**: a text-based app
+
+- **Shell**: a program that runs commands on the underlying OS
+
+- **Prompt**: where commands are typed and run
 
 - Word processor edits rich text (which is with styles attached) like _Microsoft Word_ and _Google Docs_.
 
 <img src="../../assets/git/command_prompt.png" alt="command prompt structure">
 
 <img src="../../assets/git/option_and_argument.png" alt="options and arguments in a command">
+
+- Learn more about shell commands on _ss64.com_
